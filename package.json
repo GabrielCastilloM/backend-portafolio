@@ -1,0 +1,19 @@
+{
+  "name": "backendportafolio",
+  "version": "1.0.0",
+  "description": "creacion portafolio Gabriel Castillo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Gabriel Castillo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
