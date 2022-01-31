@@ -2,17 +2,15 @@
     {
         "name": "Jose Gabriel Castillo",
         "profession" : "Full Stack Developer",
-        "photo" : "https://i.ibb.co/ThFjyny/667e3492-0b16-4931-9946-fd6e39fdff6f.jpg",
-        "about_me" : "Soy una entusiasta de las tecnologías, amo hacer desarrollo web y confío en la colaboración entre comunidades para lograr un mejor ecosistema en el ámbito de la tecnología.",
+        "photo" : "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        "about_me" : "me gustan mucho las tecnologías, amo hacer desarrollo web y confío en la colaboración entre comunidades para lograr un mejor ecosistema en el ámbito de la tecnología.",
         "skills": [
             "Javascript",
             "NodeJs",
             "ReactJS",
-            "Angular",
             "HTML",
             "CSS",
-            "MySQL",
-            "MongoDB"
+            "MySQL"          
         ]
     }
 ]

@@ -1,15 +1,15 @@
 [
     {
         "name": "Proyecto 1",
-        "description": "Utilice HTML y CSS para trabajar con los estilos y hacer un CV bonito y pechochor",
-        "image": "https://i.ibb.co/ThFjyny/667e3492-0b16-4931-9946-fd6e39fdff6f.jpg",
-        "link" : "http://cv.giulianaolmos.guixon.com/"
+        "description": "Utilice JavaScript, HTML y CSS para trabajar con los estilos utilize Snowpack Tailwind y consumi la api de api.openweathermap",
+        "image": "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        "link" : "https://gabrielcastillom.github.io/videoClima/"
     },
     {
         "name": "Proyecto 2",
-        "description": "Utilice HTML y CSS para trabajar con los estilos y hacer un CV bonito y pechochor",
-        "image": "https://i.ibb.co/ThFjyny/667e3492-0b16-4931-9946-fd6e39fdff6f.jpg",
-        "link": "http://cv.giulianaolmos.guixon.com/"
+        "description": "Utilice HTML y CSS HTML y CSS para trabajar con los estilos utilize Snowpack Tailwind",
+        "image": "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        "link": "https://gabrielcastillom.github.io/lazyLoading/"
     }
 
 ]
