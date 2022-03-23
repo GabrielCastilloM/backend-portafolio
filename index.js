@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors')
 const routerApi = require('./routes')
 
+const {logErrors, errorHandler, boomErrorHandler} = require('./middleware/error.handler')
+
 const app = express();
 const port = 4000;
 
@@ -9,8 +11,8 @@ app.use(express.json())
 
 app.use(cors());
 
-const about = require("./JSON/about.json");
-const portafolio = require("./JSON/portafolio.json");
+// const about = require("./JSON/about.json");
+// const portafolio = require("./JSON/portafolio.json");
 
 app.get('/', (req, res) => {
     res.send("Amiga, funciona")
@@ -18,13 +20,9 @@ app.get('/', (req, res) => {
 
 routerApi(app);
 
-// app.get('/about', (req, res) => {
-//     res.json(about)
-// });
-
- app.get('/portafolio', (req, res) => {
-     res.json(portafolio)
- });
+app.use(logErrors);
+app.use(boomErrorHandler);
+app.use(errorHandler);
 
 app.listen(port, () => {
     console.log(`Server on : ${port}`);

@@ -1,8 +1,8 @@
-const res = require("express/lib/response");
+const boom = require('@hapi/boom');
 
-class AboutService {
+class ProyectosService {
   constructor() {
-    this.cursos = [
+    this.proyectos = [
       {
         id: 1,
         name: "Proyecto 1",
@@ -24,41 +24,43 @@ class AboutService {
     const newCurso = {
       ...data
     }
-    this.cursos.push(newCurso)
+    this.proyectos.push(newCurso)
     return newCurso;
   }
 
   async find() {
-    return this.cursos;
+    return this.proyectos;
   }
 
   async findOne(id) {
-    const index = await this.cursos.findIndex(item => item.id == id);
-    return this.cursos[index];
+    const proyecto = await this.proyectos.find(item => item.id == id);
+    if (!proyecto) {
+      throw boom.notFound('product not found')
+    }
+    return proyecto;
   }
 
   async update(id, changes) {
-    const index = this.cursos.findIndex(item => item.id == id);
+    const index = this.proyectos.findIndex(item => item.id == id);
     if (index === -1) {
-      throw new Error('¡Curso no encontrado!');
+      throw boom.notFound('Proyecto no encontrado!');
     }
-    const curso = this.cursos[index];
-    this.cursos[index] = {
+    const curso = this.proyectos[index];
+    this.proyectos[index] = {
       ...curso,
       ...changes
     }
-    return this.cursos[index];
+    return this.proyectos[index];
   }
 
   async delete(id) {
-    const index = this.cursos.findIndex(item => item.id === id);
+    const index = this.proyectos.findIndex(item => item.id === id);
     if (index === -1) {
-      throw new Error('¡Curso no encontrado!');
+      throw boom.notFound('Proyecto no encontrado!');
     }
-    this.cursos.splice(index, 1);
-    console.log(index);
-    return this.cursos;
+    this.proyectos.splice(index, 1);
+    return this.proyectos;
   }
 }
 
-module.exports = AboutService;
+module.exports = ProyectosService;

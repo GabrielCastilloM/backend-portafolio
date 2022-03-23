@@ -2,7 +2,7 @@ const express = require("express");
 
 //importamos archivos de routes
 const aboutRouter = require('./about.router')
-const cursosRouter = require('./cursos.router');
+const proyectosRouter = require('./proyectos.router');
 
 function routerApi(app) {
   //creamos un patch global para todos los enpoints
@@ -10,7 +10,7 @@ function routerApi(app) {
   app.use('/api/v1', router)
   //enpoints principales
   router.use('/about', aboutRouter)
-  router.use('/cursos', cursosRouter)
+  router.use('/proyectos', proyectosRouter)
 }
 
 module.exports = routerApi;
