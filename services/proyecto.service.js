@@ -1,5 +1,9 @@
 const boom = require('@hapi/boom');
 
+const pool = require('../libs/mysql.pool');
+// Get a Promise wrapped instance of that pool
+const promisePool = pool.promise();
+
 class ProyectosService {
   constructor() {
     this.proyectos = [
@@ -21,45 +25,45 @@ class ProyectosService {
   }
 
   async create(data) {
-    const newCurso = {
-      ...data
-    }
-    this.proyectos.push(newCurso)
-    return newCurso;
+    let sql = `INSERT INTO tasks (name, description, image, link) VALUES (?, ?, ?, ?);`;
+    // Value to be inserted
+    const values = [];
+    values.push(data.name, data.description, data.image, data.link )
+    // Creating queries
+    const rta = await promisePool.query(sql, values);
+      const newProyecto = {
+        id: rta[0].insertId,
+        ...data
+      }
+      return newProyecto;
   }
 
   async find() {
-    return this.proyectos;
+    const [rows] = await promisePool.query("SELECT * FROM tasks");
+    return rows;
   }
 
   async findOne(id) {
-    const proyecto = await this.proyectos.find(item => item.id == id);
-    if (!proyecto) {
-      throw boom.notFound('product not found')
+    const [rows] = await promisePool.execute('SELECT * FROM tasks WHERE id = ?', [id]
+    );
+    if (rows.length === 0) {
+      throw boom.notFound('Proyecto no encontrado!');
     }
-    return proyecto;
+    return rows;
   }
 
   async update(id, changes) {
-    const index = this.proyectos.findIndex(item => item.id == id);
-    if (index === -1) {
-      throw boom.notFound('Proyecto no encontrado!');
-    }
-    const curso = this.proyectos[index];
-    this.proyectos[index] = {
-      ...curso,
-      ...changes
-    }
-    return this.proyectos[index];
+    let sql = `UPDATE tasks set ?  WHERE id = ${id}`;
+    await promisePool.query(sql, [changes]);
+    const proyecto = await this.findOne(id);
+    return proyecto
   }
 
-  async delete(id) {
-    const index = this.proyectos.findIndex(item => item.id === id);
-    if (index === -1) {
-      throw boom.notFound('Proyecto no encontrado!');
-    }
-    this.proyectos.splice(index, 1);
-    return this.proyectos;
+   async delete(id) {
+    await this.findOne(id);
+    let sql = `DELETE FROM tasks WHERE id = ${id}`;
+    await promisePool.query(sql);
+    return `Proyecto eliminado satisfactoriamente con id = ${id}`;
   }
 }
 

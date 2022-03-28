@@ -28,7 +28,9 @@ class AboutService {
   }
 
   async find() {
+    console.log('JEJEJE',this.about);
     return this.about;
+
   }
 
   async findOne(id) {

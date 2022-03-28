@@ -14,7 +14,6 @@ const link = joi.string().uri();
 
 //creamos schema para la creacion
 const createProyectoSchema = joi.object({
-  id: id.required(),
   name: name.required(),
   description: description.required(),
   image: image.required(),
