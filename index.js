@@ -5,7 +5,7 @@ const routerApi = require('./routes')
 const {logErrors, errorHandler, boomErrorHandler} = require('./middleware/error.handler')
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(express.json())
 
@@ -15,7 +15,7 @@ app.use(cors());
 // const portafolio = require("./JSON/portafolio.json");
 
 app.get('/', (req, res) => {
-    res.send("Amiga, funciona")
+    res.send("Amigo, funciona")
 });
 
 routerApi(app);
