@@ -3,11 +3,16 @@ class AboutService {
   constructor() {
     this.about = [
       {
-        name: 'Jose Gabriel Castillo',
+        name: 'Jose Gabriel Castillo Mosquera',
         profession: 'Full Stack Developer',
         photo: 'https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg',
-        about_me:'me gustan mucho las tecnologías, amo hacer desarrollo web y confío en la colaboración entre comunidades para lograr un mejor ecosistema en el ámbito de la tecnología.',
-        skills: ['Javascript', 'NodeJs', 'ReactJS', 'HTML', 'CSS', 'MySQL'],
+        about_me:`Ingeniero de sistemas con base de conocimiento en desarrollo de software
+        en diferentes lenguajes de programación y bases de datos relacionales con practica
+        en proyectos personales, tengo experiencia en el rol analistade calidad QA en todo
+        el ciclo de pruebas funcionales y en el area administrativa como cordinador de
+        contratos.`,
+        skills: ['NodeJs', 'Javascript', 'HTML', 'CSS','ReactJS', 'MySQL', 'PostgreSQL', 'PHP',
+                  'framework Yii 2.0', 'Symfony', 'Git'],
       },
     ];
   }

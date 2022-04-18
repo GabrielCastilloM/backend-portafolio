@@ -9,18 +9,46 @@ class ProyectosService {
     this.proyectos = [
       {
         id: 1,
-        name: "Proyecto 1",
+        name: "Curso JavaScript",
+        description: "Utilice JavaScript vanilla, HTML y CSS para trabajar con los estilos",
+        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        link : "https://gabrielcastillom.github.io/platzi-curso-practico-javascript/"
+      },
+      {
+        id: 2,
+        name: "Juego Simon Dice",
+        description: "Utilice JavaScript vanilla, HTML y CSS",
+        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        link : "https://gabrielcastillom.github.io/JuegoSimonDice//"
+      },
+      {
+        id: 3,
+        name: "Manipulacion del Dom",
+        description: "Utilice JavaScript, HTML y CSS ",
+        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        link : "https://gabrielcastillom.github.io/avocato/"
+      },
+      {
+        id: 4,
+        name: "Lazy Loading",
+        description: "Utilice HTML y CSS HTML y CSS para trabajar con los estilos utilize Snowpack Tailwind",
+        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        link: "https://gabrielcastillom.github.io/lazyLoading/"
+      },
+      {
+        id: 5,
+        name: "Video y Clima",
         description: "Utilice JavaScript, HTML y CSS para trabajar con los estilos utilize Snowpack Tailwind y consumi la api de api.openweathermap",
         image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
         link : "https://gabrielcastillom.github.io/videoClima/"
       },
       {
-        id: 2,
-        name: "Proyecto 2",
-        description: "Utilice HTML y CSS HTML y CSS para trabajar con los estilos utilize Snowpack Tailwind",
+        id: 6,
+        name: "React basico",
+        description: "Utilice React para consumir api de rick-morty ",
         image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
-        link: "https://gabrielcastillom.github.io/lazyLoading/"
-      }
+        link : "https://rick-morty-jgabrielcastillo.vercel.app/"
+      },
     ];
   }
 
@@ -39,8 +67,9 @@ class ProyectosService {
   }
 
   async find() {
-    const [rows] = await promisePool.query("SELECT * FROM tasks");
-    return rows;
+    //const [rows] = await promisePool.query("SELECT * FROM tasks");
+    //return rows;
+    return this.proyectos;
   }
 
   async findOne(id) {

@@ -1,4 +1,5 @@
 const express = require('express');
+const upload = require('../libs/storage');
 const ProyectosService = require('../services/proyecto.service');
 const validatorHandler = require('./../middleware/validator.handler')
 const {createProyectoSchema, UpdateProyectotSchema, getProyectoSchema} = require('./../schemas/proyectoSchema')
@@ -27,8 +28,20 @@ router.get('/:id',
   }
 );
 
-router.post('/',
+router.post('/', upload.single('image'),
   validatorHandler(createProyectoSchema, 'body'),
+  async (req, res, next) => {
+    try {
+      const body = req.body;
+      const newProyecto = await service.create(body);
+      res.status(201).json(newProyecto);
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
+router.post('/image', upload.single('image'),
   async (req, res, next) => {
     try {
       const body = req.body;
