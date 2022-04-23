@@ -11,42 +11,42 @@ class ProyectosService {
         id: 1,
         name: "Curso JavaScript",
         description: "Utilice JavaScript vanilla, HTML y CSS para trabajar con los estilos",
-        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        image: "https://i.ibb.co/6mJL417/Screenshot-1.png",
         link : "https://gabrielcastillom.github.io/platzi-curso-practico-javascript/"
       },
       {
         id: 2,
         name: "Juego Simon Dice",
         description: "Utilice JavaScript vanilla, HTML y CSS",
-        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        image: "https://i.ibb.co/H7Xnnpx/Screenshot-2.jpg",
         link : "https://gabrielcastillom.github.io/JuegoSimonDice//"
       },
       {
         id: 3,
-        name: "Manipulacion del Dom",
-        description: "Utilice JavaScript, HTML y CSS ",
-        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
-        link : "https://gabrielcastillom.github.io/avocato/"
+        name: "Portafolio",
+        description: "Cree una api restfull en node.js y mysql en el Backend subido a heroku. el Frontend en react.js deploy en vercel",
+        image: "https://i.ibb.co/2qMrwpS/portafilio.jpg",
+        link : "https://frontend-portafolio-gabriel.vercel.app/"
       },
       {
         id: 4,
         name: "Lazy Loading",
         description: "Utilice HTML y CSS HTML y CSS para trabajar con los estilos utilize Snowpack Tailwind",
-        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        image: "https://i.ibb.co/hYjXjXv/Lazy-Loading.jpg",
         link: "https://gabrielcastillom.github.io/lazyLoading/"
       },
       {
         id: 5,
         name: "Video y Clima",
         description: "Utilice JavaScript, HTML y CSS para trabajar con los estilos utilize Snowpack Tailwind y consumi la api de api.openweathermap",
-        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        image: "https://i.ibb.co/cD9LwPT/Video-Clima.jpg",
         link : "https://gabrielcastillom.github.io/videoClima/"
       },
       {
         id: 6,
-        name: "React basico",
+        name: "curso React basico",
         description: "Utilice React para consumir api de rick-morty ",
-        image: "https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg",
+        image: "https://i.ibb.co/Xs6Mzdt/Rick-Morty.jpg",
         link : "https://rick-morty-jgabrielcastillo.vercel.app/"
       },
     ];

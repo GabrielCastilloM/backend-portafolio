@@ -9,7 +9,7 @@ const name = joi.string().min(3).max(30).messages({
   'string.max': `"nombre" debe tener una longitud máxima de {#limit}`
 });
 const description = joi.string();
-const image = joi.string().uri();
+const image = joi.string();
 const link = joi.string().uri();
 
 //creamos schema para la creacion
