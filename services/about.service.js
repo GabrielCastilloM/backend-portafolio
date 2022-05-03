@@ -11,7 +11,7 @@ class AboutService {
         en proyectos personales, tengo experiencia en el rol analistade calidad QA en todo
         el ciclo de pruebas funcionales y en el area administrativa como cordinador de
         contratos.`,
-        skills: ['NodeJs', 'Javascript', 'HTML', 'CSS','ReactJS', 'MySQL', 'PostgreSQL', 'PHP',
+        skills: ['Node.js', 'Javascript', 'HTML', 'CSS','React', 'MySQL', 'PostgreSQL', 'PHP',
                   'framework Yii 2.0', 'Symfony', 'Git'],
       },
     ];

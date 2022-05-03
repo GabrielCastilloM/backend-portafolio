@@ -25,7 +25,7 @@ class ProyectosService {
         id: 3,
         name: "Portafolio",
         description: "Cree una api restfull en node.js y mysql en el Backend subido a heroku. el Frontend en react.js deploy en vercel",
-        image: "https://i.ibb.co/2qMrwpS/portafilio.jpg",
+        image: "https://i.ibb.co/ZzvHv2S/Portafolio.jpg",
         link : "https://frontend-portafolio-gabriel.vercel.app/"
       },
       {
