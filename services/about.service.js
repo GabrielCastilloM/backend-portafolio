@@ -11,8 +11,14 @@ class AboutService {
         en proyectos personales, tengo experiencia en el rol analistade calidad QA en todo
         el ciclo de pruebas funcionales y en el area administrativa como cordinador de
         contratos.`,
-        skills: ['Node.js', 'Javascript', 'HTML', 'CSS','React', 'MySQL', 'PostgreSQL', 'PHP',
-                  'framework Yii 2.0', 'Symfony', 'Git'],
+        skills: {
+          frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap', 'Tailwind'],
+          backend: ['Node.js', 'PHP', 'Laravel', 'Symfony', 'Yii 2.0'],
+          databases: ['MySQL', 'PostgreSQL'],
+          tools: ['Git', 'Postman', 'Docker'],
+          others: ['REST APIs', 'QA Testing']
+        }
+              
       },
     ];
   }
@@ -28,12 +34,12 @@ class AboutService {
 
   async createSkill(data) {
     this.about[0].skills.push(data.skills)
-    console.log(this.about);
+    // console.log(this.about);
     return this.about;
   }
 
   async find() {
-    console.log('JEJEJE',this.about);
+    // console.log('JEJEJE',this.about);
     return this.about;
 
   }
