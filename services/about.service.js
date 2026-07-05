@@ -6,11 +6,10 @@ class AboutService {
         name: 'Jose Gabriel Castillo Mosquera',
         profession: 'Full Stack Developer',
         photo: 'https://i.ibb.co/KLZv0Ht/IMG-20210101-001430.jpg',
-        about_me:`Ingeniero de sistemas con base de conocimiento en desarrollo de software
-        en diferentes lenguajes de programación y bases de datos relacionales con practica
-        en proyectos personales, tengo experiencia en el rol analistade calidad QA en todo
-        el ciclo de pruebas funcionales y en el area administrativa como cordinador de
-        contratos.`,
+        about_me:`Ingeniero de Sistemas con experiencia como Full Stack Developer, 
+        QA Tester y soporte técnico en aplicaciones empresariales. Me especializo 
+        en el desarrollo, mantenimiento y optimización de sistemas enfocados en procesos 
+        de inventarios, compras y ventas.`,
         skills: {
           frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap', 'Tailwind'],
           backend: ['Node.js', 'PHP', 'Laravel', 'Symfony', 'Yii 2.0'],
